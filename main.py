@@ -1,3 +1,5 @@
+import sys, os
+
 import datetime
 
 readmeData = """
@@ -12,21 +14,7 @@ currentDate = datetime.datetime.now()
 date = currentDate.strftime("%m-%d-%Y %I:%M")
 readmeData += "# Last Time Run\n" + str(date)
 
-# Create SVG Image
-
-img = {
-  "header": '<svg xmlns="http://www.w3.org/2000/svg" width="400px" height="200px">\n',
-  "content": '<rect x="0" y="0" width="100%" height="100%" rx="15" fill="rgb(200, 200, 200)"></rect>\n',
-  "footer": '</svg>'
-}
-
-img["content"] += '<rect x="5%" y="10%" width="90%" height="80%" rx="15" fill="rgb(255, 255, 255)"></rect>\n'
-
-imgFile = open("test.svg", "w")
-imgFile.write(img["header"])
-imgFile.write(img["content"])
-imgFile.write(img["footer"])
-imgFile.close()
+os.system("python generate.py " + sys.argv[1])
 
 # Write to README.md
 readmeFile = open("README.md", "w")
