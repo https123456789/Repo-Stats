@@ -11,10 +11,11 @@ Stats for each repository owned by [https123456789](<https://github.com/https123
 #readmeFile.close()
 
 currentDate = datetime.datetime.now()
-readmeData += "# Last Time Run\n" + str(currentDate)
+date = currentDate.strftime("%Y %m %d %I:%M")
+readmeData += "# Last Time Run\n" + str(date)
 
 # Write to README.md
 readmeFile = open("README.md", "w")
 readmeFile.write(str(readmeData))
 readmeFile.close()
-print(currentDate)
+print(date)
