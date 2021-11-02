@@ -20,7 +20,7 @@ img = {
   "footer": '</svg>'
 }
 
-img["content"] += '<rect x="10%" y="10%" width="90%" height="90%" fill="rgb(0, 0, 0)"></rect>'
+img["content"] += '<rect x="10%" y="10%" width="80%" height="80%" fill="rgb(0, 0, 0)"></rect>'
 
 imgFile = open("test.svg", "w")
 imgFile.write(img["header"])
