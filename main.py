@@ -1,7 +1,6 @@
 import datetime
+import svgwrite
 
-# Get contents of README.md
-#readmeFile = open("README.md", "r")
 readmeData = """
 # Repo Stats
 
@@ -11,8 +10,12 @@ Stats for each repository owned by [https123456789](<https://github.com/https123
 #readmeFile.close()
 
 currentDate = datetime.datetime.now()
-date = currentDate.strftime("%Y %m %d %I:%M")
+date = currentDate.strftime("%m-%d-%Y %I:%M")
 readmeData += "# Last Time Run\n" + str(date)
+
+drawing = svgwrite.Drawing('test.svg', profile='tiny')
+drawing.add(drawing.line((0, 0), (10, 10) stroke=svgwrite.rgb(10, 10, 16, "%"))
+drawing.save()
 
 # Write to README.md
 readmeFile = open("README.md", "w")
