@@ -16,11 +16,11 @@ readmeData += "# Last Time Run\n" + str(date)
 
 img = {
   "header": '<svg xmlns="http://www.w3.org/2000/svg" width="200px" height="100px">\n',
-  "content": '<rect x="0" y="0" width="100%" height="100%" rx="15" fill="rgb(255, 255, 255)"></rect>\n',
+  "content": '<rect x="0" y="0" width="100%" height="100%" rx="15" fill="rgb(200, 200, 200)"></rect>\n',
   "footer": '</svg>'
 }
 
-img["content"] += '<rect x="5%" y="10%" width="90%" height="80%" fill="rgb(0, 0, 0)"></rect>\n'
+img["content"] += '<rect x="5%" y="10%" width="90%" height="80%" rx="15" fill="rgb(255, 255, 255)"></rect>\n'
 
 imgFile = open("test.svg", "w")
 imgFile.write(img["header"])
