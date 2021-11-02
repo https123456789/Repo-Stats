@@ -17,8 +17,7 @@ jobs:
           architecture: "x64"
       - uses: actions/checkout@v2
       - name: Pip
-        run: |
-          python3 -m pip install svgwrite
+        run: python3 -m pip install svgwrite
       - name: Main
         run: python main.py
       - name: Commit
