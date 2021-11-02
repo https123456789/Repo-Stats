@@ -1,8 +1,20 @@
 import datetime
 
-currentDate = datetime.datetime.now()
+# Get contents of README.md
+#readmeFile = open("README.md", "r")
+readmeData = """
+# Repo Stats
 
+Stats for each repository owned by [https123456789](<https://github.com/https123456789>)
+"""
+#readmeFile.read()
+#readmeFile.close()
+
+currentDate = datetime.datetime.now()
+readmeData += "# Last Time Run\n" + str(currentDate)
+
+# Write to README.md
 readmeFile = open("README.md", "w")
-readmeFile.write(str(currentDate))
+readmeFile.write(str(readmeData))
 readmeFile.close()
 print(currentDate)
