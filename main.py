@@ -15,7 +15,7 @@ readmeData += "# Last Time Run\n" + str(date)
 # Create SVG Image
 
 img = {
-  "header": '<svg xmlns="https://www.w3.org/2000/svg" width="100px" height="100px">',
+  "header": '<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px">',
   "content": '<rect x="0" y="0" width="10px" height="10px"></rect>',
   "footer": '</svg>'
 }
